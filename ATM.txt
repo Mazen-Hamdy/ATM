@@ -1,0 +1,313 @@
+import sys
+print("Welcome to our bank")
+account=["user1","user2","user3","user4"]
+password=[1234,2345,3456,4567]
+abalance=[3000,500,1500,1700]
+AtmBalance=10000
+coin=[50,100,200,20]
+m=[20,20,32,30]
+print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+size=len(account)
+acc=input("Please enter your username: ")
+pin=int(input("Please enter your pin code: "))
+if (acc in account):
+	for i in range(size):
+		if acc==account[i]:
+			if pin==password[i]:
+				acc = account[i]
+				pin = password[i]
+				balance = abalance[i]
+				break
+			else:
+				print("The username or pin code is incorrect")
+				sys.exit()	
+else:
+	print("The username or pin code is incorrect")
+	sys.exit()
+print("Your balance is",balance)
+while(True):
+	choise=int(input("The operation:\n1- Fast Cash\n2- Deposite\n3- Balance Enquiry\n4- Exit\nChoose an operation: "))
+	if choise==1:
+		c=int(input("1- 50\n2- 100\n3- 150\n4- 200\n5- 500\n6- 1000\n7- 1500\n8- 2000\n9- Other amount\nyour choise is: "))
+		if c==1:
+			if 50<=balance:
+				q=50
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b	
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=50
+				AtmBalance-=50
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 50")
+			else:
+				print("Invalid Cash")
+				exit()	
+		elif c==2:
+			if 100<=balance:
+				q=100
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=100
+				AtmBalance-=100
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 100")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==3:
+			if 150<=balance:
+				q=200
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=150
+				AtmBalance-=150
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 150")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==4:
+			if 200<=balance:
+				q=200
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=200
+				AtmBalance-=200
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 200")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==5:
+			if 500<=balance:
+				q=500
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=500
+				AtmBalance-=500
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 500")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==6:
+			if 1000<=balance:
+				q=1000
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=1000
+				AtmBalance-=1000
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 1000")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==7:
+			if 1500<=balance:
+				q=1500
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1	
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=1500
+				AtmBalance-=1500
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 1500")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==8:
+			if 2000<=balance:
+				q=2000
+				while q>0:
+					a=q-200
+					b=q-100
+					d=q-50
+					if m[2]>0 and a>=0:
+						q=a
+						m[2]-=1
+					elif m[1]>0 and b>=0:
+						q=b
+						m[1]-=1
+					elif m[0]>0 and d>=0:
+						q=d
+						m[0]-=1
+				balance-=2000
+				AtmBalance-=2000
+				print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+				print("your balance is",balance)
+				print("please take cash 2000")
+			else:
+				print("Invalid Cash")
+				exit()
+		elif c==9:
+			R=int(input("Please enter the other amount: "))
+			H=R
+			B=R
+			g=0
+			i=0
+			j=0
+			q=0
+			while R>0:
+				E=R-200
+				n=R-100
+				L=R-50
+				z=R-20
+				k=R-10
+				if E>=0:
+					R=E
+					g+=1
+				elif n>=0:
+					R=n
+					i+=1
+				elif L>=0:
+					R=L
+					j+=1
+				elif z>=0:
+					R=z
+					q+=1
+				elif k>=0:
+					H-=60
+					R=k
+					m[3]-=3
+					g=0
+					i=0
+					j=0
+					q=0
+					while H>0:
+						E=H-200
+						n=H-100
+						L=H-50
+						z=H-20
+						if E>=0:
+							H=E
+							g+=1
+						elif n>=0:
+							H=n
+							i+=1
+						elif L>=0:
+							H=L
+							j+=1
+						elif z>=0:
+							H=z
+							q+=1
+			m[0]-=j
+			m[1]-=i
+			m[2]-=g
+			m[3]-=q
+			balance-=B
+			AtmBalance-=B
+			print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+			print("your balance is",balance)
+			print("please take cash",B)
+		else:
+			print("Invalid Choise")
+	elif choise==2:
+		T=int(input("Number of two hundred denomination paper: "))
+		O=int(input("Number of one hundred denomination paper: "))
+		F=int(input("Number of fifty denomination paper: "))
+		S=int(input("Number of twenty denomination paper: "))
+		total=T+O+F+S
+		x=T*200 + O*100 + F*50 + S*20
+		if total<=20:
+			balance+=x
+			AtmBalance+=x
+			m[2]+=T
+			m[1]+=O
+			m[0]+=F
+			m[3]+=S
+			print("This ATM has:\n",m[2], "paper of denomination 200 LE\n",m[1], "paper of denomination 100 LE\n",m[0], "paper of denomination 50 LE\n",m[3],"paper of denomination 20 LE")
+			print(x,"has been deposited to your balance")
+			print("Your balance is",balance)
+		else:
+			print("Cant Accept more than 20 paper")
+	elif choise==3:
+		print("Your balance is",balance)
+	elif choise==4:
+		print("Thank you for choosing our bank")
+		sys.exit()
+	else:
+		print("Invalid choise")
+
+	
